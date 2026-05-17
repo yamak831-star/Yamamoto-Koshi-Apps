@@ -168,6 +168,12 @@
       });
     });
 
+    slides.forEach(function (slide) {
+      slide.addEventListener("dragstart", function (event) {
+        event.preventDefault();
+      });
+    });
+
     carousel.addEventListener("mouseenter", function () {
       isHovered = true;
       stopAutoplay();

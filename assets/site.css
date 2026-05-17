@@ -514,6 +514,8 @@ li + li {
   border-radius: 8px;
   background: #172033;
   scroll-snap-align: center;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .screenshot-controls {
