@@ -186,6 +186,11 @@ img {
   padding: 4rem 0;
 }
 
+.hero.app-hero .container {
+  width: min(100% - 2rem, 820px);
+  align-items: start;
+}
+
 .hero.hero-simple .container {
   display: block;
   padding: 3.2rem 0;
@@ -516,8 +521,7 @@ li + li {
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
-  order: -1;
-  margin-bottom: 0.85rem;
+  margin-top: 0.85rem;
 }
 
 .screenshot-carousel.is-ready .screenshot-controls {
@@ -751,6 +755,10 @@ li + li {
     padding: 2.2rem 0;
   }
 
+  .hero.app-hero .container {
+    width: min(100% - 1rem, 820px);
+  }
+
   h1 {
     font-size: 1.65rem;
   }
@@ -796,7 +804,7 @@ li + li {
 
   .screenshot-controls {
     gap: 0.55rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
   }
 
   .screenshot-dot {
