@@ -429,47 +429,32 @@ li + li {
   min-width: 0;
 }
 
-.phone-preview {
-  padding: 1.15rem;
+.screenshot-panel {
+  width: min(100%, 360px);
+  padding: 0.8rem;
+}
+
+.screenshot-slider {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  gap: 0.8rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshot-slider img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1242 / 2688;
+  object-fit: cover;
+  border: 1px solid rgba(219, 227, 239, 0.9);
+  border-radius: 8px;
   background: #172033;
-  border-radius: 24px;
-  color: #ffffff;
-}
-
-.phone-screen {
-  min-height: 360px;
-  padding: 1.3rem;
-  background: linear-gradient(180deg, #23314b 0%, #101827 100%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 18px;
-}
-
-.timer-face {
-  display: grid;
-  place-items: center;
-  width: 10rem;
-  height: 10rem;
-  margin: 2rem auto 1.5rem;
-  border: 10px solid rgba(56, 189, 248, 0.28);
-  border-top-color: #38bdf8;
-  border-radius: 999px;
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.phone-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 0;
-  color: rgba(255, 255, 255, 0.76);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.86rem;
-}
-
-.phone-row strong {
-  color: #ffffff;
+  scroll-snap-align: center;
 }
 
 .legal-page .card {
@@ -539,20 +524,6 @@ li + li {
     padding: 1rem;
   }
 
-  .phone-preview {
-    padding: 0.9rem;
-  }
-
-  .phone-screen {
-    min-height: 320px;
-    padding: 1rem;
-  }
-
-  .timer-face {
-    width: 8.8rem;
-    height: 8.8rem;
-    margin: 1.6rem auto 1.2rem;
-  }
 }
 
 @media (max-width: 760px) {
@@ -675,21 +646,6 @@ li + li {
     width: min(100%, 280px);
   }
 
-  .phone-screen {
-    min-height: 290px;
-  }
-
-  .timer-face {
-    width: 7.8rem;
-    height: 7.8rem;
-    border-width: 8px;
-    font-size: 1.7rem;
-  }
-
-  .phone-row {
-    grid-template-columns: 1fr;
-    gap: 0.1rem;
-  }
 }
 
 @media print {
