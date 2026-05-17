@@ -50,13 +50,30 @@
           <a class="button" href="support/">Support</a>
         </div>
       </div>
-      <div class="visual-panel screenshot-panel" aria-label="EarphoneNap screenshots">
-        <div class="screenshot-slider">
-          <img src="../../../assets/store-screenshots/01-alarm.png" alt="Alarm setup screen for earphone use">
-          <img src="../../../assets/store-screenshots/02-timer.png" alt="Timer setup screen for earphone use">
-          <img src="../../../assets/store-screenshots/03-live-activity.png" alt="Home screen with Live Activity support">
-          <img src="../../../assets/store-screenshots/04-running.png" alt="Running timer screen that can continue in the background">
-          <img src="../../../assets/store-screenshots/05-snooze.png" alt="Snooze controls during an alarm">
+      <div class="visual-panel screenshot-panel screenshot-carousel" data-screenshot-carousel role="region" aria-roledescription="carousel" aria-label="EarphoneNap screenshots">
+        <div class="screenshot-viewport">
+          <div class="screenshot-slider" data-carousel-track>
+            <img data-carousel-slide src="../../../assets/store-screenshots/01-alarm.png" alt="Alarm setup screen for earphone use">
+            <img data-carousel-slide src="../../../assets/store-screenshots/02-timer.png" alt="Timer setup screen for earphone use">
+            <img data-carousel-slide src="../../../assets/store-screenshots/03-live-activity.png" alt="Home screen with Live Activity support">
+            <img data-carousel-slide src="../../../assets/store-screenshots/04-running.png" alt="Running timer screen that can continue in the background">
+            <img data-carousel-slide src="../../../assets/store-screenshots/05-snooze.png" alt="Snooze controls during an alarm">
+          </div>
+        </div>
+        <div class="screenshot-controls" aria-label="Screenshot controls">
+          <button class="screenshot-arrow" type="button" data-carousel-prev aria-label="Previous screenshot">
+            <span aria-hidden="true">&#8249;</span>
+          </button>
+          <div class="screenshot-dots" aria-label="Choose screenshot">
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 1: Alarm setup screen for earphone use" aria-current="true"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 2: Timer setup screen for earphone use" aria-current="false"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 3: Home screen with Live Activity support" aria-current="false"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 4: Running timer screen that can continue in the background" aria-current="false"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 5: Snooze controls during an alarm" aria-current="false"></button>
+          </div>
+          <button class="screenshot-arrow" type="button" data-carousel-next aria-label="Next screenshot">
+            <span aria-hidden="true">&#8250;</span>
+          </button>
         </div>
       </div>
     </div>
@@ -234,8 +251,8 @@
         </ul>
       </section>
 
-      <section class="card">
-        <h2>Related Links</h2>
+      <section class="card related-links">
+        <h2>Related links</h2>
         <ul>
           <li><a href="support/">Support</a></li>
           <li><a href="privacy/">Privacy Policy</a></li>
@@ -259,5 +276,6 @@
       </div>
     </div>
   </footer>
+  <script src="../../../assets/screenshot-carousel.js" defer></script>
 </body>
 </html>

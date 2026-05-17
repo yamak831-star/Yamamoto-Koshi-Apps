@@ -342,6 +342,39 @@ li + li {
   color: var(--muted);
 }
 
+.related-links ul {
+  display: grid;
+  gap: 0;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.related-links li {
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.related-links a {
+  display: flex;
+  align-items: center;
+  min-height: 2.85rem;
+  padding: 0.65rem 0;
+  color: var(--primary);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: 0.93rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.related-links a:hover {
+  color: var(--primary-dark);
+  background: transparent;
+}
+
 .app-card {
   display: flex;
   min-height: 100%;
@@ -431,7 +464,17 @@ li + li {
 
 .screenshot-panel {
   width: min(100%, 360px);
-  padding: 0.8rem;
+  padding: 0.85rem;
+}
+
+.screenshot-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-viewport {
+  min-width: 0;
 }
 
 .screenshot-slider {
@@ -442,11 +485,22 @@ li + li {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+  scroll-snap-stop: always;
   scrollbar-width: thin;
+  touch-action: pan-x pan-y;
   -webkit-overflow-scrolling: touch;
 }
 
-.screenshot-slider img {
+.screenshot-carousel.is-ready .screenshot-slider {
+  scrollbar-width: none;
+}
+
+.screenshot-carousel.is-ready .screenshot-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot-slider img,
+.screenshot-slider [data-carousel-slide] {
   display: block;
   width: 100%;
   aspect-ratio: 1242 / 2688;
@@ -455,6 +509,82 @@ li + li {
   border-radius: 8px;
   background: #172033;
   scroll-snap-align: center;
+}
+
+.screenshot-controls {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  order: -1;
+  margin-bottom: 0.85rem;
+}
+
+.screenshot-carousel.is-ready .screenshot-controls {
+  display: flex;
+}
+
+.screenshot-arrow,
+.screenshot-dot {
+  appearance: none;
+  padding: 0;
+  color: var(--primary);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.screenshot-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(23, 32, 51, 0.08);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.screenshot-arrow:hover,
+.screenshot-arrow:focus-visible {
+  color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+.screenshot-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.screenshot-dot {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 999px;
+  background: #b9c5d7;
+  border-color: transparent;
+}
+
+.screenshot-dot[aria-current="true"] {
+  width: 1.55rem;
+  background: var(--primary);
+}
+
+.screenshot-dot:hover,
+.screenshot-dot:focus-visible {
+  background: var(--primary-dark);
+}
+
+.screenshot-arrow:focus-visible,
+.screenshot-dot:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 3px;
 }
 
 .legal-page .card {
@@ -524,6 +654,10 @@ li + li {
     padding: 1rem;
   }
 
+  .screenshot-panel {
+    width: min(100%, 320px);
+  }
+
 }
 
 @media (max-width: 760px) {
@@ -575,6 +709,16 @@ li + li {
 
   .visual-panel {
     margin: 0 auto;
+  }
+
+  .screenshot-panel {
+    width: min(100%, 340px);
+    padding: 0.75rem;
+  }
+
+  .screenshot-arrow {
+    width: 2.7rem;
+    height: 2.7rem;
   }
 
   .grid,
@@ -644,6 +788,24 @@ li + li {
 
   .visual-panel {
     width: min(100%, 280px);
+  }
+
+  .screenshot-panel {
+    width: min(100%, 300px);
+  }
+
+  .screenshot-controls {
+    gap: 0.55rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .screenshot-dot {
+    width: 0.68rem;
+    height: 0.68rem;
+  }
+
+  .screenshot-dot[aria-current="true"] {
+    width: 1.65rem;
   }
 
 }
