@@ -428,6 +428,36 @@ li + li {
   margin-top: auto;
 }
 
+.app-card-details {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.app-card-details summary {
+  width: fit-content;
+  color: var(--primary);
+  font-size: 0.93rem;
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.app-card-details summary:hover,
+.app-card-details summary:focus-visible {
+  color: var(--primary-dark);
+}
+
+.app-card-details summary:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.app-card-details .meta-list li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
 .app-card.soon {
   background: var(--warm-soft);
   border-color: #fed7aa;
