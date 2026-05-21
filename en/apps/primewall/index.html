@@ -48,15 +48,26 @@
           <span class="button disabled" aria-disabled="true">App Store Coming Soon</span>
         </div>
       </div>
-      <div class="visual-panel primewall-placeholder" aria-label="PrimeWall placeholder visual">
-        <div class="primewall-frame">
-          <p class="primewall-title">PRIME WALL</p>
-          <div class="primewall-lanes" aria-hidden="true">
-            <span>91</span>
-            <span>97</span>
-            <span>99</span>
+      <div class="visual-panel screenshot-panel screenshot-carousel" data-screenshot-carousel role="region" aria-roledescription="carousel" aria-label="PrimeWall screenshots">
+        <div class="screenshot-viewport">
+          <div class="screenshot-slider" data-carousel-track>
+            <img data-carousel-slide src="../../../assets/store-screenshots/primewall/en/01-menu.png" alt="PrimeWall main menu screen" draggable="false">
+            <img data-carousel-slide src="../../../assets/store-screenshots/primewall/en/02-start.png" alt="Game screen at the start of level 1" draggable="false">
+            <img data-carousel-slide src="../../../assets/store-screenshots/primewall/en/03-gameplay.png" alt="Game screen showing prime-number wall judgment while running" draggable="false">
           </div>
-          <p class="primewall-caption">Screenshots will be added later.</p>
+        </div>
+        <div class="screenshot-controls" aria-label="Screenshot controls">
+          <button class="screenshot-arrow" type="button" data-carousel-prev aria-label="Previous screenshot">
+            <span aria-hidden="true">&#8249;</span>
+          </button>
+          <div class="screenshot-dots" aria-label="Choose screenshot">
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 1: PrimeWall main menu screen" aria-current="true"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 2: Game screen at the start of level 1" aria-current="false"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="Screenshot 3: Game screen showing prime-number wall judgment while running" aria-current="false"></button>
+          </div>
+          <button class="screenshot-arrow" type="button" data-carousel-next aria-label="Next screenshot">
+            <span aria-hidden="true">&#8250;</span>
+          </button>
         </div>
       </div>
     </div>
@@ -157,6 +168,7 @@
       </div>
     </div>
   </footer>
+  <script src="../../../assets/screenshot-carousel.js" defer></script>
   <a class="back-to-top" href="#" aria-label="Back to top">&#8593;</a>
 </body>
 </html>

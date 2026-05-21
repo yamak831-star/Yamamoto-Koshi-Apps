@@ -48,15 +48,26 @@
           <span class="button disabled" aria-disabled="true">App Store 公開前</span>
         </div>
       </div>
-      <div class="visual-panel primewall-placeholder" aria-label="PrimeWall の仮ビジュアル">
-        <div class="primewall-frame">
-          <p class="primewall-title">PRIME WALL</p>
-          <div class="primewall-lanes" aria-hidden="true">
-            <span>91</span>
-            <span>97</span>
-            <span>99</span>
+      <div class="visual-panel screenshot-panel screenshot-carousel" data-screenshot-carousel role="region" aria-roledescription="carousel" aria-label="PrimeWall のスクリーンショット">
+        <div class="screenshot-viewport">
+          <div class="screenshot-slider" data-carousel-track>
+            <img data-carousel-slide src="../../../assets/store-screenshots/primewall/ja/01-menu.png" alt="PrimeWall のメインメニュー画面" draggable="false">
+            <img data-carousel-slide src="../../../assets/store-screenshots/primewall/ja/02-start.png" alt="レベル2開始時のゲーム画面" draggable="false">
+            <img data-carousel-slide src="../../../assets/store-screenshots/primewall/ja/03-gameplay.png" alt="素数の壁を判断しながら走るゲーム画面" draggable="false">
           </div>
-          <p class="primewall-caption">スクリーンショットは後日差し替え予定です。</p>
+        </div>
+        <div class="screenshot-controls" aria-label="スクリーンショット操作">
+          <button class="screenshot-arrow" type="button" data-carousel-prev aria-label="前のスクリーンショット">
+            <span aria-hidden="true">&#8249;</span>
+          </button>
+          <div class="screenshot-dots" aria-label="スクリーンショットを選択">
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="1枚目: PrimeWall のメインメニュー画面" aria-current="true"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="2枚目: レベル2開始時のゲーム画面" aria-current="false"></button>
+            <button class="screenshot-dot" type="button" data-carousel-dot aria-label="3枚目: 素数の壁を判断しながら走るゲーム画面" aria-current="false"></button>
+          </div>
+          <button class="screenshot-arrow" type="button" data-carousel-next aria-label="次のスクリーンショット">
+            <span aria-hidden="true">&#8250;</span>
+          </button>
         </div>
       </div>
     </div>
@@ -157,6 +168,7 @@
       </div>
     </div>
   </footer>
+  <script src="../../../assets/screenshot-carousel.js" defer></script>
   <a class="back-to-top" href="#" aria-label="ページ上部へ">&#8593;</a>
 </body>
 </html>
